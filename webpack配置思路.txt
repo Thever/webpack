@@ -1,0 +1,56 @@
+开发环境：
+
+    打包样式资源(style-loader,css-loader,less-loader)
+
+    打包html资源( html-webnpack-plugi)
+
+    打包图片资源(html-loader url-loader file-loader)
+
+    打包其他资源(file-loader)
+
+    配置devServer(devServer,npx)
+
+    //    优化
+
+    HMR(devServer中开启，hot:true)
+
+    source-map(devtool中设置对应配置)
+
+
+生产环境：
+
+    提取css成单独文件(mini-css-extract-plugin)
+
+    css兼容性处理(postcss-loader,postcss-preset-env)
+
+    压缩css( optimize-css-assets-webpack-plugin)
+
+    js语法检查(eslint eslint-loader eslint-config-airbnb-base eslint-plugin-import)
+
+    js兼容性处理(babel@core babel-loader @babel/preset-env，并进行配置)
+
+    js压缩(mode切换成production自动压缩)
+
+    html压缩(html-webpack-plugin)
+
+    //    优化打包构建速度
+
+    oneOf(优化正则匹配)
+
+    缓存(babel开启缓存， cacheDirectory: true)
+
+    多进程打包(繁重任务用thread-loader进行多线程打包)
+
+    externals(不打包三方库，使用三方cdn)
+
+    dll(三方库单独打包)
+
+    //    优化代码性能
+
+    tree shaking(production模式，开启es6模块化)
+
+    code split(多入口模式，配置optimization，import语法动态语法导入)
+
+    lazy loading(懒加载，不加载不必要资源，可以使用预加载)
+
+    pwa(workbox-webpack-plugin，serviceworker)
